@@ -30,5 +30,20 @@
     <ClCompile Include="어린왕자.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="트리 순회.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS와 BFS.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="정렬.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="세 수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="수 정렬하기2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
