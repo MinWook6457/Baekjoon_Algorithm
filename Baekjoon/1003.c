@@ -3,7 +3,7 @@
 #pragma warning(disable:4996)
 
 void fibonacci(int n, int* a, int* b) {
-	int i, t;
+	int t;
 	if (n == 0) {
 		(*a)++;
 	}
@@ -13,7 +13,7 @@ void fibonacci(int n, int* a, int* b) {
 	else {
 		*a = 1;
 		*b = 1;
-		for (i = 2;i < n;i++) {
+		for (int i = 2;i < n;i++) {
 			t = *a + *b;
 			*a = *b;
 			*b = t;
