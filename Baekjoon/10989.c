@@ -7,7 +7,7 @@ int main() {
 
 	scanf("%d", &n);
 
-	int count[max] = { 0, };
+	int count[max] = { 0, }; // 배열 모든 원소 0으로 초기화
 
 	for (int i = 0; i < n; i++) {
 		int x;

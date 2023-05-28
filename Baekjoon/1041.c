@@ -1,4 +1,5 @@
 #include <stdio.h>
+#pragma warning(disable:4996)
 #define max(x,y) ((x) > (y) ? (x) : (y)) 
 #define min(x,y) ((x) < (y) ? (x) : (y)) 
 // 3면이 보이는 주사위 갯수, 2면이 보이는 주사위 갯수, 1면이 보이는 주사위 갯수의 합을 구하는 문제이다.
@@ -7,7 +8,7 @@
 // A,F는 0과5, E,B는 1과4, C,D는 2와3이 마주본다.
 int n;
 int dice[6];
-int three = 151, two = 101, one = 51, large = 0;
+int three = 5000, two = 5000, one = 5000, large = 0;
 long long result = 0;
 int main() {
     int n;
@@ -15,10 +16,10 @@ int main() {
     for (int i = 0; i < 6; i++) {
         scanf("%d", &dice[i]);
         result += dice[i];
-        large = max(large, dice[i]);
+        large = max(large, dice[i]); 
     }
 
-    if (n == 1) {
+    if (n == 1) { // 주사위가 1개인 경우
         printf("%lld", result - large);
         return 0;
     }

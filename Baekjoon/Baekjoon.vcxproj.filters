@@ -234,5 +234,17 @@
     <ClCompile Include="10989.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1913.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1874.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1197.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1407.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
