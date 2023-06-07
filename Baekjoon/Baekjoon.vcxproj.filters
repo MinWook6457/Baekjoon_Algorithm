@@ -279,5 +279,17 @@
     <ClCompile Include="25083.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2206-ing.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11049.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1300.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1157.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
