@@ -312,5 +312,8 @@
     <ClCompile Include="10845.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1929.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
