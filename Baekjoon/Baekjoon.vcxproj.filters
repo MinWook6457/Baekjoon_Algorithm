@@ -315,5 +315,23 @@
     <ClCompile Include="1929.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1018.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1259.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1436.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1654.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1920.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10866.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
