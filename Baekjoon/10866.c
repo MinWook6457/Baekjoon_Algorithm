@@ -1,110 +1,115 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #pragma warning(disable:4996)
-#define MAX_QUEUE 100
-typedef struct {
-	int data[MAX_QUEUE];
-	int front, rear;
-}DequeType;
 
-void init_queue(DequeType* q) {
-	q->front = q->rear = 0;
-}
+int deq[10001];
+int count = 0;
 
-int is_empty(DequeType* q) {
-	if (q->front == q->rear)
-		return 1;
-	else
-		return 0;
-}
-
-int front(DequeType* q) {
-	return q->data[q->front];
-}
-
-int back(DequeType* q) {
-	return q->data[q->rear];
-}
-
-int size(DequeType* q) {
-	return (q->front - q->rear);
-}
-
-int is_full(DequeType* q) {
-	if (q->front == (q->rear + 1) % MAX_QUEUE)
-		return 1;
-	else
-		return 0;
-}
-
-/* push_back X: 정수 X를 덱의 뒤에 넣는다. */
-void push_back(DequeType* q, int item) {
-	if (is_full(q)) {
-		printf("큐가 포화상태 입니다.");
+void push_front(int data) {
+	for (int i = count;i >= 0;i--) {
+		deq[i + 1] = deq[i];
 	}
-
-	q->rear = (q->rear + 1) % MAX_QUEUE;
-	q->data[q->rear] = item;
+	deq[0] = data;
+	count++;
 }
 
-/* pop_front: 덱의 가장 앞에 있는 수를 빼고, 그 수를 출력한다. 만약, 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다. */
-int pop_front(DequeType* q) {
-	int item;
-
-	if (is_empty(q)) {
-		return -1;
-	}
-
-	q->front = (q->front + 1) % MAX_QUEUE;
-	item = q->data[q->front];
-	return item;
+void push_back(int data) {
+	deq[count] = data;
+	count++;
 }
 
-/* push_front X: 정수 X를 덱의 앞에 넣는다. */
-void push_front(DequeType* q, int value) {
-	if (is_full(q)) {
-		printf("큐가 포화상태 입니다.\n");
+void pop_front() {
+	if (deq[0] == 0 && count == 0) {
+		printf("-1\n");
 	}
-	q->data[q->front] = value;
-	q->front = (q->front - 1 + MAX_QUEUE) % MAX_QUEUE;
+	else {
+		printf("%d\n", deq[0]);
+		for (int i = 0; i < count; i++) {
+			deq[i] = deq[i + 1];
+		}
+		deq[count] = 0;
+		count--;
+	}
 }
 
-
-
-int pop_back(DequeType* q) {
-	int del = q->rear; // 인덱스 저장
-	if (is_empty(q)) {
-		return -1;
+void pop_back() {
+	if (deq[0] == 0 && count == 0) {
+		printf("-1\n");
 	}
-	q->rear = (q->rear - 1 + MAX_QUEUE) % MAX_QUEUE; // 인덱스 감소
-	return q->data[del];
+	else {
+		printf("%d\n", deq[count - 1]);
+		deq[count - 1] = 0;
+		count--;
+	}
+}
+
+void empty() {
+	if (deq[0] == 0 && count == 0) {
+		printf("1\n");
+	}
+	else {
+		printf("0\n");
+	}
+}
+
+void size() {
+	printf("%d\n", count);
+}
+
+void front() {
+	if (deq[0] == 0 && count == 0) {
+		printf("-1\n");
+	}
+	else {
+		printf("%d\n", deq[0]);
+	}
+}
+
+void back() {
+	if (deq[0] == 0 && count == 0) {
+		printf("-1\n");
+	}
+	else {
+		printf("%d\n", deq[count - 1]);
+	}
 }
 
 int main() {
 	int n;
 	scanf("%d", &n);
-	DequeType q;
-	int k;
-	init_queue(&q);
 
+	char s[20];
 	for (int i = 0; i < n; i++) {
-		char s[11];
 		scanf("%s", s);
 		if (strcmp(s, "push_front") == 0) {
-			scanf("%d", &k);
-			push_front(&q,k);
+			int x;
+			scanf("%d", &x);
+			push_front(x);
 		}
 		else if (strcmp(s, "push_back") == 0) {
-			scanf("%d", &k);
-			push_back(&q,k);
+			int y;
+			scanf("%d", &y);
+			push_back(y);
 		}
-		else if (strcmp(s, "pop_front") == 0) printf("%d\n", pop_front(&q));
-		else if (strcmp(s, "pop_back") == 0) printf("%d\n", pop_back(&q));
-		else if (strcmp(s, "size") == 0) printf("%d\n", size(&q));
-		else if (strcmp(s, "empty") == 0) printf("%d\n", is_empty(&q));
-		else if (strcmp(s, "front") == 0) printf("%d\n", front(&q));
-		else if (strcmp(s, "back") == 0) printf("%d\n", back(&q));
+		else if (strcmp(s, "pop_front") == 0) {
+			pop_front();
+		}
+		else if (strcmp(s, "pop_back") == 0) {
+			pop_back();
+		}
+		else if (strcmp(s, "empty") == 0) {
+			empty();
+		}
+		else if (strcmp(s, "size")==0) {
+			size();
+		}
+		else if (strcmp(s, "front") == 0) {
+			front();
+		}
+		else if (strcmp(s, "back") == 0) {
+			back();
+		}
 	}
+	
 	return 0;
 }
