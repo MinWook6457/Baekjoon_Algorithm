@@ -333,5 +333,23 @@
     <ClCompile Include="10866.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1978.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2164.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2609.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2798.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4153.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9012.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
