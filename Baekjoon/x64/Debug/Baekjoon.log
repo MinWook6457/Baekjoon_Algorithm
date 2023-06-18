@@ -1,4 +1,2 @@
-﻿  9012.c
-C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\Baekjoon\9012.c(13,20): warning C4047: '=': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\Baekjoon\9012.c(52,16): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  10816.c
   Baekjoon.vcxproj -> C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\x64\Debug\Baekjoon.exe

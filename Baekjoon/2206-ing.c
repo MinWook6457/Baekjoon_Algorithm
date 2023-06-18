@@ -7,7 +7,6 @@
 #include <stdio.h>
 #pragma warning(disable:4996)
 #define MAX_QUEUE 100
-
 #define ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 int visited[2][1001][1001];
