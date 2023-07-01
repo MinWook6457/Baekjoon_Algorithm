@@ -1,2 +1,4 @@
-﻿  2420.c
+﻿  2178.c
+C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\Baekjoon\2178.c(41,12): warning C4101: 'y' :참조되지 않은 지역 변수입니다.
+C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\Baekjoon\2178.c(41,9): warning C4101: 'x' :참조되지 않은 지역 변수입니다.
   Baekjoon.vcxproj -> C:\Users\kih25\OneDrive\바탕 화면\Baekjoon\x64\Debug\Baekjoon.exe
